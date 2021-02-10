@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+}
+
+
+.center {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+    height: 25%;
+    width: 20%;
+    animation-name: animate;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animate {
+    10%  {background-color:orangered; }
+    20% {background-color: palegreen;}
+    30% {background-color: rebeccapurple;}
+    40% {background-color: saddlebrown;}
+    50% {background-color: skyblue;}
+    60% {background-color: snow;}
+    70% {background-color: navy;}
+    80% {background-color: steelblue;}
+    90% {background-color: indigo;}
+    100% {background-color: lavender;}
+}
+
+@keyframes textimate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+} 
+
+@keyframes out {
+    from {transform: rotate(360deg);}
+    to {transform: rotate(0deg);}
+}
+
+h1{
+    animation: out;
+    animation-duration: 2s;
+}
+
+.box:hover > h1 {
+    animation: textimate;
+    animation-duration: 2s;
+    /* cursor: pointer;
+    transform: rotate(360deg);
+    transition: 2s;
+    animation-direction: reverse;
+    animation-fill-mode: reverse; */
+}
