@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    border: 10px solid green;
+}
+
+div {
+    height: 10vh;
+    width: 10vw;
+    background-color: grey;
+    /* animation-name: bob;
+    animation-duration: 4s;
+    animation-iteration-count: infinite; */
+}
+
+div:hover {
+    animation-name: bob;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bob {
+    0% {
+        transform: translate( 0,0 );
+        background-color: grey;
+    }
+    25% {
+        transform: translate(90vw,0);
+        background-color: blue ;
+    }
+    50% {
+        transform: translate(90vw,90vh);
+        background-color: red;
+    }
+    75% {
+        transform: translate(0vw,90vh) rotate(180deg);
+        background-color: green;
+    }
+    100% { 
+        transform: translate( 0,0 );
+        background-color: grey;
+    }
+}
